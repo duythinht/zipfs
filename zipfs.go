@@ -7,10 +7,12 @@ import (
 	"io/fs"
 )
 
+// FS for zip
 type FS struct {
 	*zip.Reader
 }
 
+// NewFS create new zipFS reader
 func NewFS(r *zip.Reader) *FS {
 	return &FS{
 		Reader: r,
