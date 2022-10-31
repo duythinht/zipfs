@@ -19,6 +19,8 @@ if err != nil {
     // ....
 }
 
+fsys := zipfs.NewFS(zipReader)
+
 fs.WalkDir(fsys, "", func(path string, d fs.DirEntry, err error) error {
     // do something with file
     return nil
